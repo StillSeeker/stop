@@ -1,8 +1,7 @@
-// Updated JavaScript with auto-play and mobile support
 document.addEventListener('DOMContentLoaded', () => {
     const music = document.getElementById('background-music');
-    
-    // Auto-play music with user interaction
+
+    // Ensure the music plays on page load
     const playMusic = () => {
         music.play().catch(() => {
             // Handle autoplay restrictions
