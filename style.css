@@ -1,0 +1,107 @@
+/* style.css */
+body {
+    margin: 0;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e, #ffaaaa);
+    font-family: 'Pacifico', cursive;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.valentine-container {
+    position: relative;
+    max-width: 800px;
+    margin: 2% auto;
+    padding: 30px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
+}
+
+.photo-frame {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff69b4, #ff1493);
+    padding: 10px;
+    animation: pulse 2s infinite;
+}
+
+.bestie-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.photo-glare {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    width: 30%;
+    height: 30%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.4));
+    clip-path: polygon(100% 0, 0 0, 50% 100%);
+    transform: rotate(30deg);
+}
+
+.valentine-title {
+    color: #fff;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.message-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 20px;
+    transform: rotate(-2deg);
+    transition: transform 0.3s;
+}
+
+.message-text {
+    font-size: 1.3em;
+    color: #ff69b4;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.music-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 50%;
+    background: #ff69b4;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.95); }
+    50% { transform: scale(1); }
+    100% { transform: scale(0.95); }
+}
+
+@keyframes fall {
+    from { top: -10%; }
+    to { top: 110%; }
+}
+
+.hearts-falling {
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
